@@ -1,6 +1,17 @@
+const computerSelection = computerPlay();
+const playerSelection = playerPlay();
+
 function computerPlay() {
-    let choices = ["Rock", "Paper", "Scissors"]
-        choices = choices[Math.floor(Math.random()*choices.length)]
-            return choices;
+    let computerChoices = ["Rock", "Paper", "Scissors"]
+        computerChoices = computerChoices[Math.floor(Math.random()*computerChoices.length)]
+            return computerChoices;
+}
+function playerPlay() {
+    let playerChoices = prompt("Rock, paper, or scissors?");
+        playerChoices = playerChoices.charAt(0).toUpperCase() + playerChoices.slice(1).toLowerCase();
+            return playerChoices;
+}
+function playRound(playerSelection, computerSelection) {
+
 }
 
