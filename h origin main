@@ -1,0 +1,83 @@
+[33mcommit eba1db3e3ea2b2ca63895a73711e07d1dfb772a0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/rps-ui[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: meioseii <moreno.austin12@gmail.com>
+Date:   Tue Oct 18 10:47:59 2022 +0800
+
+    game is now functional
+
+[33mcommit 88ea954fe52614f08dec4b875d06fbed3b0c808c[m
+Author: meioseii <moreno.austin12@gmail.com>
+Date:   Thu Oct 6 07:58:00 2022 +0800
+
+    modified header
+
+[33mcommit a8973fda4b4ae10a05f7ce05ae639cf224322023[m
+Author: meioseii <moreno.austin12@gmail.com>
+Date:   Thu Oct 6 07:57:45 2022 +0800
+
+    added cursor pointer on hover
+
+[33mcommit 53e9c4973cff03271b7d3e61c5b97945ec66c867[m
+Author: meioseii <moreno.austin12@gmail.com>
+Date:   Wed Oct 5 20:54:24 2022 +0800
+
+    icons updated & credits given to the rightful owner.
+
+[33mcommit b8c3a3d4bc2765a389621f285e97473b0df4502c[m
+Author: meioseii <moreno.austin12@gmail.com>
+Date:   Wed Oct 5 20:12:02 2022 +0800
+
+    made a whole static page
+
+[33mcommit a5232b67fba8ba01374a410865ddc10c22c71b9b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: meioseii <moreno.austin12@gmail.com>
+Date:   Sun Jul 3 07:29:38 2022 +0800
+
+    added a function that starts the game, it plays 5rounds now
+
+[33mcommit 89c86fc7e5a3cfe7c38b85dca40e32422a28731f[m
+Author: meioseii <moreno.austin12@gmail.com>
+Date:   Thu Jun 16 08:01:17 2022 +0800
+
+    playRound function added.
+
+[33mcommit adbc2e92599f4e268f8b34e0f71f64aac3139bb1[m
+Author: meioseii <moreno.austin12@gmail.com>
+Date:   Thu Jun 16 07:45:38 2022 +0800
+
+    playerPlay function added.
+
+[33mcommit f6110167cfed4f55b12ba609cb0bb00a8dfff1c8[m
+Author: meioseii <moreno.austin12@gmail.com>
+Date:   Thu Jun 16 07:39:25 2022 +0800
+
+    computerlay function added.
+
+[33mcommit 61531a1337f6e5be09595e8136b12f07a52dc827[m
+Author: meioseii <moreno.austin12@gmail.com>
+Date:   Thu Jun 16 07:23:54 2022 +0800
+
+    reset the whole project
+
+[33mcommit 6d9ce8eb479ec2a057cc172b3296b5ae246c5260[m
+Author: meioseii <moreno.austin12@gmail.com>
+Date:   Wed Jun 15 09:39:07 2022 +0800
+
+    function playerPlay added, gets the choice of the player rpp.
+
+[33mcommit 8c9bf63446a296cd67bff7838bcd09faff24b3b7[m
+Author: meioseii <moreno.austin12@gmail.com>
+Date:   Tue Jun 14 12:09:01 2022 +0800
+
+    inserted the array in computerPlay function, playerSelection renamed.
+
+[33mcommit 99b372224b274192afa61c4d5a405f1c238d5652[m
+Author: meioseii <moreno.austin12@gmail.com>
+Date:   Mon Jun 13 12:40:15 2022 +0800
+
+    computerPlay and startRound function done
+
+[33mcommit c224db7107426eef35d0882ed89ac0ae975cf663[m
+Author: Austin <105921882+meioseii@users.noreply.github.com>
+Date:   Sun Jun 12 10:19:25 2022 +0800
+
+    Initial commit
