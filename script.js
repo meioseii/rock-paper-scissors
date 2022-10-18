@@ -1,36 +1,108 @@
+let playerScore = 0;
+let computerScore = 0;
+
+const rockBtn = document.querySelector('.rock') 
+const paperBtn = document.querySelector('.paper')
+const scissorsBtn = document.querySelector('.scissors')
+
+const player = document.querySelector('.playerScore')
+player.textContent = `Player Score: ${playerScore}`
+const computer = document.querySelector('.computerScore')
+computer.textContent = `Computer Score: ${computerScore}`
+
+const disable = document.querySelectorAll('button')
+
+const p = document.querySelector('.outcome')
+p.textContent = "Choose your weapon!"
+
+const finish = document.querySelector('.done')
+
+function disableBtns() {
+        disable.forEach(elem => {
+                elem.disabled = true
+        })
+}
 
 function computerPlay() {
     let computerChoices = ["Rock", "Paper", "Scissors"]
         computerChoices = computerChoices[Math.floor(Math.random()*computerChoices.length)]
             return computerChoices;
 }
-function playerPlay() {
+/* function playerPlay() {
     let playerChoices = prompt("Rock, Paper, or Scissors?");
         playerChoices = playerChoices.charAt(0).toUpperCase() + playerChoices.slice(1).toLowerCase();
         return playerChoices;
-}
+} */
+
 function playRound(playerSelection, computerSelection) {
 
-        playerSelection = playerPlay();
-        computerSelection = computerPlay();
+        /* playerSelection = playerPlay();
+        computerSelection = computerPlay(); */
 
     if (playerSelection === computerSelection) {
-        return "Draw!"
+        p.innerText = `Draw! You both picked ${playerSelection}! `
     }   else if (playerSelection === "Rock" && computerSelection === "Scissors") {
-            return "You win! Rock beats Scissors!"
+        playerScore++;
+        p.innerText = "You win! Rock beats Scissors!"
     }   else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-            return "You win! Scissors beats Paper!"
+        playerScore++;
+        p.innerText = "You win! Scissors beats Paper!"
     }   else if (playerSelection === "Paper" && computerSelection === "Rock") {
-            return "You win! Paper beats Rock!"
+        playerScore++;
+        p.innerText = "You win! Paper beats Rock!"
     }   else if (playerSelection === "Rock" && computerSelection === "Paper") {
-            return "You lose! Paper beats Rock!"
+        computerScore++;
+        p.innerText = "You lose! Paper beats Rock!"
     }   else if (playerSelection === "Scissors" && computerSelection === "Rock") {
-            return "You lose! Rock beats Scissors!"
+        computerScore++;
+        p.innerText = "You lose! Rock beats Scissors!"
     }   else if (playerSelection === "Paper" && computerSelection === "Scissors") {
-            return "You lose! Scissors beats Paper!"
+        computerScore++;
+        p.innerText = "You lose! Scissors beats Paper!"
     }
 }
-function game() {
+
+const winner = (playerScore, computerScore) => {
+        if (playerScore === 5) {
+                p.innerText = `You won against the computer! ${playerScore} to ${computerScore}`
+                finish.textContent = "Reload the page to play again."
+                disableBtns()
+        }
+        if (computerScore === 5) {
+                p.innerText = `You lost to a computer! ${playerScore} to ${computerScore}`
+                finish.textContent = "Reload the page to play again."
+                disableBtns()
+        }
+}
+
+rockBtn.addEventListener('click', () => {
+        const computerSelection = computerPlay()
+        const playerSelection = 'Rock'
+        playRound(playerSelection, computerSelection)
+        player.textContent = `Player Score: ${playerScore}`
+        computer.textContent = `Computer Score: ${computerScore}`
+        winner(playerScore, computerScore)
+})
+
+paperBtn.addEventListener('click', () => {
+        const computerSelection = computerPlay()
+        const playerSelection = 'Paper'
+        playRound(playerSelection, computerSelection)
+        player.textContent = `Player Score: ${playerScore}`
+        computer.textContent = `Computer Score: ${computerScore}`
+        winner(playerScore, computerScore)
+})
+
+scissorsBtn.addEventListener('click', () => {
+        const computerSelection = computerPlay()
+        const playerSelection = 'Scissors'
+        playRound(playerSelection, computerSelection)
+        player.textContent = `Player Score: ${playerScore}`
+        computer.textContent = `Computer Score: ${computerScore}`
+        winner(playerScore, computerScore)
+})
+
+/* function game() {
         let playerScore = 0;
         let computerScore = 0;
         let drawLog = 0;
@@ -64,8 +136,8 @@ function game() {
         } else if (playerScore < computerScore) {
                 console.log(`Game Over! YOU LOSE TO A COMPUTER! ${playerScore}:${computerScore}`)
         }
-}
-
+} 
+ */
 
 
 

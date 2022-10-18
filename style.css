@@ -34,10 +34,11 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 4em;
     gap: 100px;
 }
 
-.btn {
+button {
     display: flex;
     justify-content: space-around;
     border-radius: 30px;
@@ -45,9 +46,20 @@ img {
     border: none;
 }
 
-.btn:hover {
+button:hover {
     transform: scale(1.5);
     cursor: pointer;
+}
+
+.outcome {
+    text-align: center;
+    font-size: 24px;
+}
+
+.done {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 36px;
 }
 
 .scores {
