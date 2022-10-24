@@ -15,13 +15,34 @@ const disable = document.querySelectorAll('button')
 const p = document.querySelector('.outcome')
 p.textContent = "Choose your weapon!"
 
-const finish = document.querySelector('.done')
+const container = document.querySelector('.restart')
+const restartBtn = document.createElement('button');
+restartBtn.classList.add('restartBtn')
+restartBtn.textContent = "PLAY AGAIN"
+
+
+restartBtn.addEventListener('click', () => {
+        playerScore = 0;
+        computerScore = 0;
+        player.textContent = "Player Score: 0"
+        computer.textContent = "Computer Score: 0"
+        container.removeChild(restartBtn)
+        disableBtnsFalse()
+        p.textContent = "Choose your weapon!"
+})
+
+function disableBtnsFalse() {
+        disable.forEach(elem => {
+                elem.disabled = false
+        })
+}
 
 function disableBtns() {
         disable.forEach(elem => {
                 elem.disabled = true
         })
 }
+
 
 function computerPlay() {
     let computerChoices = ["Rock", "Paper", "Scissors"]
@@ -65,15 +86,16 @@ function playRound(playerSelection, computerSelection) {
 const winner = (playerScore, computerScore) => {
         if (playerScore === 5) {
                 p.innerText = `You won against the computer! ${playerScore} to ${computerScore}`
-                finish.textContent = "Reload the page to play again."
                 disableBtns()
+                container.appendChild(restartBtn)
         }
         if (computerScore === 5) {
                 p.innerText = `You lost to a computer! ${playerScore} to ${computerScore}`
-                finish.textContent = "Reload the page to play again."
                 disableBtns()
+                container.appendChild(restartBtn)
         }
 }
+
 
 rockBtn.addEventListener('click', () => {
         const computerSelection = computerPlay()

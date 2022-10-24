@@ -1,5 +1,5 @@
 * {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: cursive, brush script mt;
     text-decoration: none;
 }
 
@@ -56,10 +56,14 @@ button:hover {
     font-size: 24px;
 }
 
-.done {
-    margin-top: 50px;
-    text-align: center;
-    font-size: 36px;
+.restart {
+    margin-top: 2em;
+    display:flex;
+    justify-content: center;
+}
+
+.restartBtn {
+    font-size: 24px;
 }
 
 .scores {
